@@ -256,7 +256,7 @@ void set_input(void) {
 void channel_select(uint8_t data) {
   digitalWriteFast(AD_D7, HIGH);                 // PD1 = 1: Normal Operation Mode. External clock mode is selected
   digitalWriteFast(AD_D6, HIGH);                 // PD0 = 0: Normal Operation Mode. External clock mode is selected
-  digitalWriteFast(AD_D5, LOW);                  // ACQMOD = 1: Internal Acquisition Mode
+  digitalWriteFast(AD_D5, LOW);                  // ACQMOD = 0: Internal Acquisition Mode
   digitalWriteFast(AD_D4, HIGH);                 // SGL/DIF = 1: Single-Ended Analog Input Mode
   digitalWriteFast(AD_D3_D11, HIGH);             // UNI/BIP = 1: Unipolar Mode
   digitalWriteFast(AD_D2_D10, (data >> 2) & 1);  // A2
